@@ -8,7 +8,7 @@ I've reverse engineered the API by checking what endpoints are invoked using [Ch
 
 This API is subject to change at any time and you should obviously take care using this client since it could result in loss of funds in your Revolut account.
 
-Hopefully Revolut will release an official API for the personal app and not just for Revolut Business.
+Hopefully Revolut will release an official API for the personal/consumer app and not just for Revolut Business.
 
 _NOTE: I do not take any responsibility of loss of funds or similar issues due to using this client!_
 
