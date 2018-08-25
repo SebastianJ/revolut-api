@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.revolut.com/user/current
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Host:
+      - api.revolut.com
+      X-Client-Version:
+      - 5.12.1
+      X-Api-Version:
+      - '1'
+      X-Device-Id:
+      - DEVICE_ID
+      X-Device-Model:
+      - iPhone8,1
+      User-Agent:
+      - Revolut/com.revolut.revolut (iPhone; iOS 11.1)
+      Authorization:
+      - BASIC_AUTH
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Aug 2018 07:59:18 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Request-Id:
+      - SOME_REQUEST_ID
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.z-SNAPSHOT)
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '{"user":{"id":"USER_ID","createdDate":1535143780000,"address":{"city":"Beverly Hills","country":"US","postcode":"90210","region":"California","streetLine1":"Sunset Boulevard"},"birthDate":[2008,10,31],"firstName":"Satoshi","lastName":"Nakamoto","phone":"+1555555555","email":"satoshi@bitcoin.org","emailVerified":true,"state":"ACTIVE","referralCode":"BTFO","kyc":"PASSED","termsVersion":"2018-09-20","underReview":false,"riskAssessed":false,"locale":"en-GB","sof":{"state":"APPROVED"}},"wallet":{"id":"wallet-12345","ref":"111111111","state":"ACTIVE","baseCurrency":"EUR","totalTopup":10000,"topupResetDate":1535143780000,"pockets":[{"id":"eur-pocket-1111111","type":"CURRENT","state":"ACTIVE","currency":"EUR","balance":10000,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"gbp-pocket-1111111","type":"CURRENT","state":"ACTIVE","currency":"GBP","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"usd-pocket-1111111","type":"CURRENT","state":"ACTIVE","currency":"USD","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"sek-pocket-1111111","type":"CURRENT","state":"ACTIVE","currency":"SEK","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"ltc-pocket-1111111","type":"CURRENT","state":"ACTIVE","currency":"LTC","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"btc-pocket-1111111","type":"CURRENT","state":"ACTIVE","currency":"BTC","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"eth-pocket-1111111","type":"CURRENT","state":"ACTIVE","currency":"ETH","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0}]}}'
+    http_version: 
+  recorded_at: Sat, 25 Aug 2018 07:59:18 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.revolut.com/api/quote/internal?symbol=XRPUSD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Host:
+      - www.revolut.com
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML,
+        like Gecko) Version/11.1.2 Safari/605.1.15
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.7
+      Date:
+      - Sat, 25 Aug 2018 12:33:31 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Request-Id:
+      - SOME_REQUEST_ID
+      Alt-Svc:
+      - clear
+      - clear
+      Via:
+      - 1.1 google, 1.1 google
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"from":"BTC","to":"USD","rate":6589.0336937937,"timestamp":1535200410299},{"from":"ETH","to":"USD","rate":274.23714639115,"timestamp":1535200410299},{"from":"LTC","to":"USD","rate":56.6497541683,"timestamp":1535200410299},{"from":"XRP","to":"USD","rate":0.320474478,"timestamp":1535200410299}]'
+    http_version: 
+  recorded_at: Sat, 25 Aug 2018 12:33:31 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.revolut.com/signin
+    body:
+      encoding: UTF-8
+      string: '{"phone":"+1555555555","password":"9999"}'
+    headers:
+      Host:
+      - api.revolut.com
+      X-Client-Version:
+      - 5.12.1
+      X-Api-Version:
+      - '1'
+      X-Device-Id:
+      - DEVICE_ID
+      X-Device-Model:
+      - iPhone8,1
+      User-Agent:
+      - Revolut/com.revolut.revolut (iPhone; iOS 11.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 24 Aug 2018 20:13:43 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Request-Id:
+      - SOME_REQUEST_ID
+      Server:
+      - Jetty(9.4.z-SNAPSHOT)
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 24 Aug 2018 20:13:43 GMT
+recorded_with: VCR 4.0.0

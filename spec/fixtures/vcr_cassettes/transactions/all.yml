@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.revolut.com/user/current/transactions?from=1533081600000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Host:
+      - api.revolut.com
+      X-Client-Version:
+      - 5.12.1
+      X-Api-Version:
+      - '1'
+      X-Device-Id:
+      - DEVICE_ID
+      X-Device-Model:
+      - iPhone8,1
+      User-Agent:
+      - Revolut/com.revolut.revolut (iPhone; iOS 11.1)
+      Authorization:
+      - BASIC_AUTH
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Aug 2018 10:42:31 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Request-Id:
+      - SOME_REQUEST_ID
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.z-SNAPSHOT)
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '[{"id":"transaction-id-111111","legId":"leg-id-111111","type":"CARD_PAYMENT","state":"PENDING","startedDate":1535193905000,"updatedDate":1535193905000,"currency":"EUR","amount":-1000,"fee":0,"description":"Coinbase","suggestions":[],"rate":10.0,"merchant":{"id":"11111","scheme":"MASTERCARD","name":"Coinbase","country":"US","city":"San Francisco","address":"Some address 1","postcode":"111111","mcc":"1234","category":"crypto"},"counterpart":{"amount":-1000,"currency":"EUR"}},{"id":"counter-party-id-11111","legId":"another-leg-id-222222","type":"TRANSFER","state":"COMPLETED","startedDate":1535193905000,"updatedDate":1535193905000,"completedDate":1535193905000,"currency":"USD","amount":-5000,"fee":0,"balance":0,"description":"To Roger Ver","suggestions":[],"rate":1,"recipient":{"id":"another-id-333333","firstName":"Roger","lastName":"Ver","phone":"+11133334444555"}}]'
+    http_version: 
+  recorded_at: Sat, 25 Aug 2018 10:42:31 GMT
+recorded_with: VCR 4.0.0

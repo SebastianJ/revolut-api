@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "revolut/api"
+
+require "yaml"
+
+cfg_path                    =   File.join(File.dirname(__FILE__), "../credentials.yml")
+
+if ::File.exists?(cfg_path)
+  cfg                       =   YAML.load_file(cfg_path)
+
+  Revolut::Api.configure do |config|
+    config.user_id          =   cfg["user_id"]
+    config.access_token     =   cfg["access_token"]
+    
+    config.user_agent       =   cfg["user_agent"]
+    
+    config.device_id        =   cfg["device_id"]
+    config.device_model     =   cfg["device_model"]
+    
+    config.api_version      =   cfg["api_version"]
+    config.client_version   =   cfg["client_version"]
+    
+    config.verbose          =   true
+  end
+end
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+require "pry"
+Pry.config.history.file = File.join(__FILE__, "../.pry_history")
+Pry.start
+
+#require "irb"
+#IRB.start(__FILE__)

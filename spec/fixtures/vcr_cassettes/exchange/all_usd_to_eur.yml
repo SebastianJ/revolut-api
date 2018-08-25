@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.revolut.com/user/current/wallet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Host:
+      - api.revolut.com
+      X-Client-Version:
+      - 5.12.1
+      X-Api-Version:
+      - '1'
+      X-Device-Id:
+      - DEVICE_ID
+      X-Device-Model:
+      - iPhone8,1
+      User-Agent:
+      - Revolut/com.revolut.revolut (iPhone; iOS 11.1)
+      Authorization:
+      - BASIC_AUTH
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Aug 2018 11:25:22 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Request-Id:
+      - SOME_REQUEST_ID
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.z-SNAPSHOT)
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '{"id":"WALLET-ID","ref":"REF-ID","state":"ACTIVE","baseCurrency":"EUR","totalTopup":1000,"topupResetDate":1535197000000,"pockets":[{"id":"EUR-POCKET-ID","type":"CURRENT","state":"ACTIVE","currency":"EUR","balance":1000,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"USD-POCKET-ID","type":"CURRENT","state":"ACTIVE","currency":"USD","balance":11,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"GBP-POCKET-ID","type":"CURRENT","state":"ACTIVE","currency":"GBP","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"SEK-POCKET-ID","type":"CURRENT","state":"ACTIVE","currency":"SEK","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"LTC-POCKET-ID","type":"CURRENT","state":"ACTIVE","currency":"LTC","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"BTC-POCKET-ID","type":"CURRENT","state":"ACTIVE","currency":"BTC","balance":62340,"blockedAmount":0,"closed":false,"creditLimit":0},{"id":"ETH-POCKET-ID","type":"CURRENT","state":"ACTIVE","currency":"ETH","balance":0,"blockedAmount":0,"closed":false,"creditLimit":0}]}'
+    http_version: 
+  recorded_at: Sat, 25 Aug 2018 11:25:23 GMT
+- request:
+    method: post
+    uri: https://api.revolut.com/exchange
+    body:
+      encoding: UTF-8
+      string: '{"fromCcy":"USD","toCcy":"EUR","rateTimestamp":1535196323,"fromAmount":11}'
+    headers:
+      Host:
+      - api.revolut.com
+      X-Client-Version:
+      - 5.12.1
+      X-Api-Version:
+      - '1'
+      X-Device-Id:
+      - DEVICE_ID
+      X-Device-Model:
+      - iPhone8,1
+      User-Agent:
+      - Revolut/com.revolut.revolut (iPhone; iOS 11.1)
+      Authorization:
+      - BASIC_AUTH
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Aug 2018 11:25:23 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Request-Id:
+      - SOME_REQUEST_ID
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.z-SNAPSHOT)
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '[{"id":"ALL-USD-TO-EUR-TRANSACTION-ID","legId":"ALL-USD-TO-EUR-LEG-ID","type":"EXCHANGE","state":"COMPLETED","startedDate":1535196323261,"updatedDate":1535196323261,"completedDate":1535196323261,"currency":"USD","amount":-11,"fee":0,"balance":0,"description":"Exchanged
+        to EUR","suggestions":[],"account":{"id":"USD-POCKET-ID"},"rate":0.8553219,"direction":"sell","counterpart":{"amount":9,"currency":"EUR","account":{"id":"EUR-POCKET-ID"}}},{"id":"ALL-USD-TO-EUR-TRANSACTION-ID","legId":"ANOTHER-ALL-USD-TO-EUR-LEG-ID","type":"EXCHANGE","state":"COMPLETED","startedDate":1535196323261,"updatedDate":1535196323261,"completedDate":1535196323261,"currency":"EUR","amount":9,"fee":0,"balance":41892,"description":"Exchanged
+        from USD","suggestions":[],"account":{"id":"EUR-POCKET-ID"},"rate":1.1691504,"direction":"buy","counterpart":{"amount":-11,"currency":"USD","account":{"id":"USD-POCKET-ID"}}}]'
+    http_version: 
+  recorded_at: Sat, 25 Aug 2018 11:25:23 GMT
+recorded_with: VCR 4.0.0

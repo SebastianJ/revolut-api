@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.revolut.com/exchange
+    body:
+      encoding: UTF-8
+      string: '{"fromCcy":"EUR","toCcy":"USD","rateTimestamp":1535195515,"fromAmount":10}'
+    headers:
+      Host:
+      - api.revolut.com
+      X-Client-Version:
+      - 5.12.1
+      X-Api-Version:
+      - '1'
+      X-Device-Id:
+      - DEVICE_ID
+      X-Device-Model:
+      - iPhone8,1
+      User-Agent:
+      - Revolut/com.revolut.revolut (iPhone; iOS 11.1)
+      Authorization:
+      - BASIC_AUTH
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Aug 2018 11:11:55 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Request-Id:
+      - SOME_REQUEST_ID
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.z-SNAPSHOT)
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '[{"id":"EUR-TO-USD-TRANSACTION-ID","legId":"EUR-TO-USD-LEG-ID","type":"EXCHANGE","state":"COMPLETED","startedDate":1535195515514,"updatedDate":1535195515514,"completedDate":1535195515514,"currency":"EUR","amount":-10,"fee":0,"balance":10000,"description":"Exchanged
+        to USD","suggestions":[],"account":{"id":"EUR-POCKET-ID"},"rate":1.15717505,"direction":"sell","counterpart":{"amount":11,"currency":"USD","account":{"id":"USD-POCKET-ID"}}},{"id":"EUR-TO-USD-TRANSACTION-ID","legId":"ANOTHER-EUR-TO-USD-LEG-ID","type":"EXCHANGE","state":"COMPLETED","startedDate":1535195515514,"updatedDate":1535195515514,"completedDate":1535195515514,"currency":"USD","amount":11,"fee":0,"balance":11,"description":"Exchanged
+        from EUR","suggestions":[],"account":{"id":"USD-POCKET-ID"},"rate":0.86417348,"direction":"buy","counterpart":{"amount":-10,"currency":"EUR","account":{"id":"EUR-POCKET-ID"}}}]'
+    http_version: 
+  recorded_at: Sat, 25 Aug 2018 11:11:55 GMT
+recorded_with: VCR 4.0.0
