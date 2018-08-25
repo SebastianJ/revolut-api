@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    revolut (0.1.0)
+    revolut-api (0.1.0)
       faraday (>= 0.15)
       faraday_middleware (>= 0.12)
 
@@ -55,7 +55,7 @@ DEPENDENCIES
   pry (~> 0.11)
   rake (~> 10.0)
   rdoc (~> 6.0)
-  revolut!
+  revolut-api!
   rspec (~> 3.0)
   vcr (~> 4.0)
   webmock (~> 3.1)
