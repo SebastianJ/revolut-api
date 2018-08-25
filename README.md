@@ -32,7 +32,7 @@ Or install it yourself as:
 
 ### Public client
 
-If you just want to use the public client to check exchange rates:
+If you just want to use the public client to check exchange rates/quotes:
 
 ```ruby
 public_client = Revolut::Api::Public::Client.new
