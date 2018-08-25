@@ -1,8 +1,8 @@
 # Revolut::Api
 
-Revolut::Api is a Ruby gem to interact with Revolut's unofficial and internal API.
+Revolut::Api is a Ruby gem to interact with Revolut's internal consumer API.
 
-This is the actual API used by the iOS/Android apps and not the business API.
+This is the actual API used by the iOS/Android apps and this is not the business API.
 
 I've reverse engineered the API by checking what endpoints are invoked using [Charles Proxy](https://www.charlesproxy.com).
 
